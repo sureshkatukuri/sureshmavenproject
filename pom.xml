@@ -21,11 +21,11 @@
           <groupId>org.apache.maven.plugins</groupId>
          <artifactId>maven-war-plugin</artifactId>
  <configuration>
-         <outputDirectory>/opt/test</outputDirectory>
+         <outputDirectory>/mnt</outputDirectory>
   </configuration>
   </plugin>
   </plugins>
-  <finalName>WebProject</finalName>
+  <finalName>sureshmaven</finalName>
   </build>
 
 </project>
