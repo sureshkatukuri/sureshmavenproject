@@ -24,7 +24,7 @@
          <outputDirectory>/mnt</outputDirectory>
   </configuration>
   </plugin>
-   <finalName>sureshmaven</finalName>
+ 
 
 
 <plugin>
@@ -63,6 +63,8 @@
                 </configuration>
 </plugin>
  </plugins>
+    <finalName>sureshmaven</finalName>
+  
   </build>
 
 </project>
