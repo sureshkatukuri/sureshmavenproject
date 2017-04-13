@@ -19,12 +19,28 @@
  <plugins>
  <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-war-plugin</artifactId>
+         <artifactId>rpm-maven-plugin</artifactId>
+	 <version>2.0-beta-2</version>
  <configuration>
-         <outputDirectory>/mnt/sankar.war</outputDirectory>
-  </configuration>
-  </plugin>
-  </plugins>
+         <copyright>2010 - dimitrisli</copyright>
+                    <group>Application/Collectors</group>
+                    <release>1212</release>
+                    <mappings>
+                        <mapping>
+                            <directoryIncluded>false</directoryIncluded>
+                            <directory>/usr/local/tomcat/apache-tomcat-8.0.37/webapps</directory>
+                            <username>tomcat</username>
+                            <groupname>tomcat</groupname>
+                            <sources>
+                                <source>
+                                    <location>/mnt/sureshmaven.war</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
+                </configuration>
+   </plugin>
+ </plugins>
   <finalName>sureshmaven</finalName>
   </build>
 
