@@ -19,29 +19,50 @@
  <plugins>
  <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>rpm-maven-plugin</artifactId>
-	 <version>2.0-beta-2</version>
+         <artifactId>maven-war-plugin</artifactId>
  <configuration>
-         <copyright>2010 - dimitrisli</copyright>
-                    <group>Application/Collectors</group>
-                    <release>1212</release>
+         <outputDirectory>/mnt</outputDirectory>
+  </configuration>
+  </plugin>
+   <finalName>sureshmaven</finalName>
+
+
+<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.1.5</version>
+
+                <configuration>
+                    <disabled>false</disabled>
+
+                    <name>ts-ecommerce</name>
+                    <version>1234</version>
+                    <release>9999</release>
+                    <group>business services</group>
+                    <summary>sureshmaven.war</summary>
+                    <description>Ecommerce Project</description>
+                    <vendor>Twinspires</vendor>
+                    <defaultDirmode>755</defaultDirmode>
+                    <defaultFilemode>644</defaultFilemode>
+                    <defaultUsername>tomcat</defaultUsername>
+                    <defaultGroupname>tomcat</defaultGroupname>
+                    <targetOS>linux</targetOS>
+
                     <mappings>
                         <mapping>
                             <directoryIncluded>false</directoryIncluded>
                             <directory>/mnt</directory>
-                            <username>tomcat</username>
-                            <groupname>tomcat</groupname>
                             <sources>
                                 <source>
-                                    <location>/mnt/sureshmaven.war</location>
+                                    <location>./target/sureshmaven.war</location>
                                 </source>
                             </sources>
                         </mapping>
                     </mappings>
+
                 </configuration>
-   </plugin>
+</plugin>
  </plugins>
-  <finalName>sureshmaven</finalName>
   </build>
 
 </project>
