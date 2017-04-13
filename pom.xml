@@ -28,7 +28,7 @@
                     <mappings>
                         <mapping>
                             <directoryIncluded>false</directoryIncluded>
-                            <directory>/usr/local/tomcat/apache-tomcat-8.0.37/webapps</directory>
+                            <directory>/mnt</directory>
                             <username>tomcat</username>
                             <groupname>tomcat</groupname>
                             <sources>
